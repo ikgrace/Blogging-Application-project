@@ -39,8 +39,9 @@ h1{
 
 p{
     margin-right: 100px;
-    color: white;
-}
+    background-color: white;
+    width: 600px;
+    }
 
 
 h2{
@@ -48,4 +49,9 @@ h2{
     background-color: white;
     width: 200px;
 
+}
+
+article {
+    background-color: white;
+    width: 500px;
 }
