@@ -1,0 +1,27 @@
+body {
+background-image:url("/blog.jpeg");
+}
+
+h2{
+    margin-top: 200px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 300px;
+}
+
+a{
+        color: #16d5e;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #2b2ace;
+    border-color: #2e6da4;
+}

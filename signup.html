@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/sistyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    </head>
+<body style = "background-image: url(images/log.jpg)">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Minds space</a>
+    </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+
+            </li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <center><div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 ">
+        <form>
+            <h2>create an account</h2>
+            <hr/>
+            <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="text"  ng-model="newUser.firstName" class="form-control input-md" placeholder="First name" tabindex="1" required>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="text" ng-model="newUser.lastName"  class="form-control input-md" placeholder="Last name" tabindex="2" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+                    <input type="email" ng-model="newUser.email"  class="form-control input-md" placeholder="Email address" tabindex="3" required>
+                </div>
+
+                <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="password"  ng-model="newUser.password" class="form-control input-md" placeholder="Password" tabindex="4" required>
+                </div>
+            </div>
+             <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="text" ng-model="newUser.confirmPassword"  class="form-control input-md" placeholder="ConfirmPassword" tabindex="5" required>
+                </div>
+            </div>
+             </div>
+
+              <div class="row">
+
+             <div class="col-xs-12  col-md-6">
+                <button type="submit" ng-click="signup()" class="btn btn-primary btn-block btn-md" tabindex="6" ><a href="Userdash.html" >Register</a></button>
+            </div>
+             </div>
+        </form>
+        </div>
+        </div>
+        </center>
+
+
+<div class="footer">
+    <div class="container">
+    <hr>
+        <div class="text-center center-block">
+            <p class="txt-railway">&copy; 2016 Company, Inc.</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>
