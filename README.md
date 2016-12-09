@@ -8,7 +8,7 @@ It also returns the stored value, file, the time and the date to the dashboard f
 
 
 The languages used are:
-HTML, CSS, BOOTSTRAP and JAVASCRIPT
+HTML5, CSS and JAVASCRIPT
 
 Contributors:
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
