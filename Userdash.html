@@ -99,7 +99,7 @@ Blog..">
 
         var stories = JSON.parse(localStorage.getItem("Story"));
         for (story in stories) {
-            var str = "<article><h2>"+stories[story].title+"</h2><h4><strong>Category</strong>: "+stories[story].category+"</h4><h5>"+stories[story].date+", "+stories[story].time+"</h5><p>"+stories[story].content+"</p></article><hr/>";
+            var str = "<article><h2>"+stories[story].title+"</h2><h4><strong>Category</strong>: "+stories[story].category+"</h4><h5>"+stories[story].date+", "+stories[story].time+"</h5><p>"+stories[story].content+"</p><input>"+stories[story].fileupload+"</article><hr/>";
             $("section").prepend(str);
         }
     }
