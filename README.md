@@ -1,8 +1,10 @@
 # Blogging-Application-project
-MINDS SPACE is a simple blogging application where posts are saved in the local storage for persistency
+MINDS SPACE is a simple blogging application where posts are saved in the local storage for persistency.
+
+The features include:
 The posts are saved in an object which is saved in a array
 It provides the ability to store value by getting anything that is posted and push it to the local storage
-It also returns the stored value, the time and the date to the dashboard for the user to view
+It also returns the stored value, file, the time and the date to the dashboard for the user to view
 
 
 The languages used are:
