@@ -4,14 +4,14 @@
     <title>User Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="ustyle.css">
+    <link rel="stylesheet" type="text/css" href="css/ustyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
         <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body style = "background-image: url(images/log.jpg)">
 
     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -32,7 +32,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+          <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
 
+            </li>
+          </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
@@ -40,41 +45,85 @@
   <div class="row content">
     <div class="col-sm-3 sidenav">
       <h4>User Dashboard</h4>
-      <ul class="nav nav-pills nav-stacked">
+      <!--<ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="home.html">Home</a></li>
-        <li><a href="#section2">Friends</a></li>
-        <li><a href="#section3">Family</a></li>
-        <li><a href="#section3">Photos</a></li>
-      </ul><br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search
+        <li><a href="#section2"></a></li>
+        <li><a href="#section3"></a></li>
+        <li><a href="#section3"></a></li>
+      </ul><br>-->
+<div class="input-group">
+<!--<input type="text" class="form-control" placeholder="Search
 Blog..">
 
-        <span class="input-group-btn">
+<span class="input-group-btn">
           <button class="btn btn-default" type="button">
             <span class="glyphicon glyphicon-search"></span>
           </button>
-        </span>
+        </span>-->
       </div>
     </div>
+    <center>
+        <header>
+    <h1>Welcome to <span id="name">User's</span> Minds space</h1>
+    </header>
 
-    <div class="col-sm-6">
+    <section>
+    </section>
+    </center>
+    <center><a href="formPage.html"><button class="button">New Story</button></a></center>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        document.body.onload = function(){
+        //uncomment this section for uniqueness of blog name and content
+       /*var name = prompt("What is your name?");
+        if (localStorage.getItem("name") == null){
+            localStorage.setItem("name", name);
+        }
+        else{
+            var name_check = localStorage.getItem("name");
+            if (name.toUpperCase() !== name_check.toUpperCase()){
+                localStorage.removeItem("Story");
+                localStorage.setItem("name", name);
+            }
+        }
+        document.getElementById("name").innerHTML = name+"'s";*/
+
+
+        if (localStorage.getItem("Story") == null){
+            var str = "<h2> Welcome! </h2>"+"<p>Click the New Story button below to get started sharing your unique voice!</p>";
+            $("section").append(str);
+        }
+        else{
+        $("section").empty();
+
+        var entries = JSON.parse(localStorage.getItem("Story"));
+        for (entry in entries) {
+            var str = "<article><h2>"+entries[entry].title+"</h2><h4><strong>Category</strong>: "+entries[entry].category+"</h4><h5>"+entries[entry].date+", "+entries[entry].time+"</h5><p>"+entries[entry].content+"</p></article><hr/>";
+            $("section").prepend(str);
+        }
+    }
+    };
+    </script>
+
+    <!--<div class="col-sm-6">
     <textarea rows = "6" cols = "50" placeholder="Write your story"></textarea>
 
 
-    </div>
+    </div>-->
   </div>
 </div>
 
-<span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;"><section>
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;">  <form id="form" action="#" method="POST">
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;">  <input id="description" name="description" type="text" />
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;">  <input id="add" type="submit" value="Add" />
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;">  <button id="clear">Clear All</button>
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;">  </form>
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;">  <div id="alert"></div>
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;">  <ul id="todos"></ul>
-</span><span style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px;"></section></span>
+<!--<div class="footer">
+    <div class="container">
+    <hr>
+        <div class="text-center center-block">
+            <p class="txt-railway">&copy; 2016 Company, Inc.</p>
+
+        </div>
+    </div>
+</div>-->
+
 </body>
 
 </html>
